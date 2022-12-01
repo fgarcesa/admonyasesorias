@@ -1,24 +1,3 @@
-// FUNCION PARA AGREGAR EDIFICIOS A BASE SQL
-$(document).ready(function(){	
-	
-	$("#boton-agregar").click(function(){
-		
-		var nit = $("#inputnit").val()
-		var nombre = $("#inputnombre").val()
-		var direccion = $("#inputdireccion").val()
-		var telefono = $("#inputtelefono").val()
-		var ciudad = $("#inputciudad").val()
-		var fecha = $("#inputfecha").val()
-
-		$.ajax({
-                url: `./php/insertabase.php` + `?nit="` + nit + `"&nombre="` + nombre + `"&direccion="` + direccion + `"&telefono="` + telefono + `"&ciudad="` + ciudad + `"&fecha="` + fecha + `"`,                
-                success: function(e){console.log(e);},
-                timeout: 4000,
-                error: function(){console.log("han habido problemas");}
-              });
-	})
-})
-
 // FUNCION PARA LOGIN
 $(document).ready(function(){
     $("#enviar").click(function(){
@@ -35,7 +14,7 @@ $(document).ready(function(){
             success: function(e){
                 if(e == "Redirigiendo"){
                     setTimeout(function(){
-                        window.location = "aplicativo.php"
+                        window.location = "aplicativo.php?tabla=copropiedades"
                     },2000)
                     }
             },

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Applicativo Web Administración</title>
 		<!-- ICONO -->
-		<link rel="icon" href="../img/favicon.ico">
+		<link rel="icon" href="./img/favicon.ico">
 		<!-- CUSTOM CSS -->
 		<link rel="stylesheet" type="text/css" href="css/styles-panel.css">
 		<!-- IMPORTAR OPEN SANS -->
@@ -19,11 +19,11 @@
 		<header id="planel-global"></header>
 		<main>
 			<nav>				
+				<img src="img/logo.png">
+				<h2>Administraciones y Asesorías Jurídicas S.A.S.</h2>
 				<ul>
 					<?php
-				        // Me aseguro que la petición a la base de datos me devuelva los caracteres en UTF-8
-				        mysqli_set_charset($mysqli, "utf8mb4");
-				        // Quiero una lista de todos los usuarios
+						// Quiero una lista de todos los usuarios
 				        $query = "SHOW TABLES FROM edificios;";
 				        // Ejecuto la petición contra la base de datos y me guardo el resultado en una variable
 				        $result = mysqli_query($mysqli, $query);
@@ -36,7 +36,5 @@
 			</nav>
 			<section>
 				<header id="panel-seccion">
-					<img src="img/logo.png">
-					<h1>Panel de Control Administración</h1>
-					<h2>Administraciones y Asesorías Jurídicas S.A.S.</h2>
+					<h1>Panel de Control Administración de P.H.</h1>
 				</header>
