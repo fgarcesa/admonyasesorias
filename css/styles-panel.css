@@ -139,6 +139,22 @@ button{
     margin:16px;
 }
 
+.botonmodificar:hover{
+    background:#FBC02D;
+}
+
+.botonborrar:hover{
+    background:#E64A19;
+}
+
+.botoninsertar:hover{
+    background:#388E3C;
+}
+
+.botonvolver:hover{
+    background:#0288D1;
+}
+
 form{
     padding:20px;
 }
