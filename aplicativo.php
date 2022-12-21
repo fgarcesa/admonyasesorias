@@ -66,9 +66,11 @@
 		                    	while ($row = mysqli_fetch_assoc($result)) {
 		                        	if ($row['Field'] == 'id') {
 		                        		echo '<input type="hidden" name="'.$row['Field'].'" placeholder="Indica tu '.$row['Field'].'">';
+		                        	}else if(mb_substr(strval($row['Field']),0,4)=="fecha"){
+		                        		echo '<input type="date" name="'.$row['Field'].'" placeholder="Indica tu '.$row['Field'].'">';
 		                        	}
 		                        	else{
-		                        		echo '<input type="text" name="'.$row['Field'].'" placeholder="Indica tu '.$row['Field'].'">';
+		                        		echo '<input type="text" name="'.$row['Field'].'" placeholder="Indica tu '.$row['Field'].'" required>';
 		                        		}
 		                   		}
 		                    ?>
@@ -159,7 +161,7 @@
 				            // Ejecuto la petición contra la base de datos y me guardo el resultado en una variable
 				            mysqli_query($mysqli, $query);
 				        }
-				        header('Location: ?tabla='.$_POST['tabla']);
+				    header('Location: ?tabla='.$_POST['tabla']);
 				    }	
         		?>
 			</section>
